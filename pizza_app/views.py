@@ -53,8 +53,8 @@ def view(request, pizza_order_id):
     if request.method == 'GET':
         # pizza = get_object_or_404(PizzaOrder, id=pizza_order_id)
 
-        pizza = PizzaOrder.objects.select_related().prefetch_related(
-            'extra', 'exclude'
+        pizza = PizzaOrder.objects.select_related().prefetch_related(           #select_related() объединяет множество запросов в один
+            'extra', 'exclude'                                                  #prefetch_related() объединяет несколько запросов
         ).filter(
             id=pizza_order_id
         ).first()

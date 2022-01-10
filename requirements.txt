@@ -1,5 +1,6 @@
-Django
+Django==1.10.7
 django-debug-toolbar
 pytz
 sqlparse
 wheel
+django-queryinspect

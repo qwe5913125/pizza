@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # debug:
-    'debug_toolbar',
+   # 'debug_toolbar',
 
 
 
@@ -53,7 +53,7 @@ INTERNAL_IPS = [
 
 MIDDLEWARE = [
     # debug:
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
+    #'debug_toolbar.middleware.DebugToolbarMiddleware',
 
     # basic:
     'django.middleware.security.SecurityMiddleware',

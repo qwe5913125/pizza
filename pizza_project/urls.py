@@ -24,14 +24,14 @@ from pizza_app.views import index
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
-    url(r'^pizza/', include(pizza_urls, namespace='pizza')),
+    url(r'^pizza/', include(pizza_urls, namespace='pizza')), #неймспейс для ссылки сюда из темплейта например pizza:create будет соответствовать URL pizza/create
 
     url(r'^$', index, name='index'),
 ]
 
 
-if settings.DEBUG:
-    import debug_toolbar
-    urlpatterns += [
-        url(r'^__debug__/', include(debug_toolbar.urls)),
-    ]
+# if settings.DEBUG:
+#     import debug_toolbar
+#     urlpatterns += [
+#         url(r'^__debug__/', include(debug_toolbar.urls)),
+#     ]
